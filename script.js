@@ -2,13 +2,19 @@
 
 
 // When 'Number of Characters' range slider is adjusted. Then the number of characters display is synced accordingly. 
-
 const characterAmountRange = document.getElementById('characterRange')
 const characterAmountNumber = document.getElementById('characterNumber')
 
+const isMale = document.getElementById('isMale')
+const isFemale = document.getElementById('isFemale')
+
+const form = document.getElementById('form')
+
+// When character range/number input is altered, execute syncCharacters function
 characterAmountRange.addEventListener('input', syncCharacters)
 characterAmountNumber.addEventListener('input', syncCharacters)
-
+// Create the syncCharacter function
+// Function takes in an event (e) arguement
 function syncCharacters(e){
     let value = e.target.value
 
@@ -16,12 +22,16 @@ function syncCharacters(e){
     characterAmountNumber.value = value
 }
 
+// When male is checked, isMale is set to true
+// When male is unchecked, isMale is set to false
 
-// create a value variable
-// how to set value variable = input
 
-// set character amount range.value = value variable
-// set character amount number.value = value variable
+form.addEventListener('submit', function(e){
+    e.preventDefault()
+    console.log("generate name!")
+})
+
+
 
 
 

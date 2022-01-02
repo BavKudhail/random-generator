@@ -12,21 +12,21 @@
     <div class="container">
             <h1 class="title">Random Name Generator</h1>
             <h3 class="passwordDisplay">Random Name</h3>
-            <form>
+            <form id="form">
                 <label for="">Number of Characters</label>
 
                 <div>
                     <input type="range" min="3" max="8" value="6" id="characterRange">
-                    <input type="number" value="6" min="8" max="10" id="characterNumber">
+                    <input type="number" value="6" min="3" max="8" id="characterNumber">
                 </div>
 
                 <label for="">Is Male?</label>
-                <input type="checkbox">
+                <input id="isMale" type="checkbox">
 
                 <label for="">Is Female?</label>
-                <input type="checkbox">
+                <input id="isFemale" type="checkbox">
 
-                    <button>Generate Name!</button>
+                    <button type="submit">Generate Name!</button>
             </form>
     </div>
 </body>
