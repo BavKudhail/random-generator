@@ -42,11 +42,12 @@ button {
   border: 1px solid white;
   padding: 1rem 1rem;
   margin: 0 20%;
-  background-color: #041eb1;
+  background-image: linear-gradient(160deg, #041eb1 0%, #031161 100%);
+
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
 button:hover {
-  background-color: #021480;
+  background-image: linear-gradient(160deg, #a804b1 0%, #61035e 100%);
 }
