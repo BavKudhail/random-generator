@@ -11,11 +11,10 @@ let MaleNameObject = {
 // When 'Number of Characters' range slider is adjusted. Then the number of characters display is synced accordingly. 
 const characterAmountRange = document.getElementById('characterRange')
 const characterAmountNumber = document.getElementById('characterNumber')
-
 const isMale = document.getElementById('isMale')
 const isFemale = document.getElementById('isFemale')
-
 const form = document.getElementById('form')
+const passwordDisplay = document.getElementById('passwordDisplay')
 
 // When character range/number input is altered, execute syncCharacters function
 characterAmountRange.addEventListener('input', syncCharacters)
@@ -28,19 +27,15 @@ function syncCharacters(e){
     characterAmountNumber.value = value
 }
 
-// When male is checked, isMale is set to true
-// When male is unchecked, isMale is set to false
-
 
 form.addEventListener('submit', function(e){
     e.preventDefault()
     console.log("generate name!")
-    // If male is checked, select from the array of possible male names
-    // If female is checked, select from the array of possible female names
     const characterAmount = characterAmountNumber.value
     const maleNames = isMale.checked
     const femaleNames = isFemale.checked
     const password = generatePassword(characterAmount, isMale, isFemale)
+    passwordDisplay.innerText = password
 })
 
 function generatePassword(characterAmount, isMale, isFemale){
