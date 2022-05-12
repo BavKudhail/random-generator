@@ -1,4 +1,4 @@
-# 14 Random Name Generator
+# Random Name Generator
 
 ## The Goal
 Mini-project created in order to help cement my learning thus far. 
